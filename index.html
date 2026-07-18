@@ -281,6 +281,30 @@ function removeItem(index) {
 
     `;
 
+}function checkout() {
+
+    if (cart.length === 0) {
+
+        alert("Your cart is empty!");
+
+        return;
+
+    }
+
+    alert(
+
+        "Thank you for shopping at Ayaan Market!\n\n" +
+
+        "Your total is " +
+
+        cart.reduce((sum, item) => sum + Number(item.price), 0).toLocaleString() +
+
+        " RWF.\n\n" +
+
+        "Payment page coming next."
+
+    );
+
 }</script>
 </body>
 
