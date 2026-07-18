@@ -223,7 +223,45 @@ total += Number(item.price);
 `;
 }
 
-</script>
+function removeItem(index) {
+
+    cart.splice(index, 1);
+
+    const cartDiv = document.getElementById("cart");
+
+    cartDiv.innerHTML = "";
+
+    let total = 0;
+
+    cart.forEach(item => {
+
+        cartDiv.innerHTML += `
+
+            <p>
+
+                ${item.name} - ${item.price} RWF
+
+                <button onclick="removeItem(${cart.indexOf(item)})">
+
+                    Remove
+
+                </button>
+
+            </p>
+
+        `;
+
+        total += Number(item.price);
+
+    });
+
+    cartDiv.innerHTML += `
+
+        <h3>Total: ${total.toLocaleString()} RWF</h3>
+
+    `;
+
+}</script>
 </body>
 
 </html>
