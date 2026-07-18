@@ -201,8 +201,12 @@ cart.forEach(item => {
         <p>${item.name} - ${item.price} RWF</p>
 
     `;
+total += Number(item.price);
+});cartDiv.innerHTML += `
 
-});
+    <h3>Total: ${total.toLocaleString()} RWF</h3>
+
+`;
 }
 
 </script>
