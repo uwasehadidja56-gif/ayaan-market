@@ -198,9 +198,23 @@ cart.forEach(item => {
 
     cartDiv.innerHTML += `
 
-        <p>${item.name} - ${item.price} RWF</p>
+    <p>
 
-    `;
+        ${item.name} - ${item.price} RWF
+
+        <button onclick="removeItem(${cart.indexOf(item)})">
+
+            Remove
+
+        </button>
+
+    </p>
+
+`;
+
+        
+
+    
 total += Number(item.price);
 });cartDiv.innerHTML += `
 
