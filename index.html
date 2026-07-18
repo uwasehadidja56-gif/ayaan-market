@@ -237,17 +237,27 @@ function removeItem(index) {
 
         cartDiv.innerHTML += `
 
-            <p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin:10px 0;">
 
-                ${item.name} - ${item.price} RWF
+    <span>${item.name} - ${item.price} RWF</span>
 
-                <button onclick="removeItem(${cart.indexOf(item)})">
+    <button onclick="removeItem(${cart.indexOf(item)})">
 
-                    Remove
+        Remove
 
-                </button>
+    </button>
 
-            </p>
+</div>
+
+                
+
+                
+
+                    
+
+                
+
+            
 
         `;
 
