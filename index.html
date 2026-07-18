@@ -188,7 +188,19 @@ function addToCart(button) {
     cart.push({ name, price });
 
     alert(name + " added to cart!");
+const cartDiv = document.getElementById("cart");
 
+cartDiv.innerHTML = "";
+
+cart.forEach(item => {
+
+    cartDiv.innerHTML += `
+
+        <p>${item.name} - ${item.price} RWF</p>
+
+    `;
+
+});
 }
 
 </script>
