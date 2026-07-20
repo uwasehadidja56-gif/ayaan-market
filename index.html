@@ -203,8 +203,11 @@ function addToCart(button) {
 
     alert(name + " added to cart!");
 const cartDiv = document.getElementById("cart");
+const checkoutButton = document.getElementById("checkoutBtn");
 
 cartDiv.innerHTML = "";
+
+cartDiv.appendChild(checkoutButton);
 
 let total = 0;
 
