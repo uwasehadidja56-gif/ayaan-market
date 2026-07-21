@@ -110,7 +110,7 @@ button:hover{
         
         <input type="email" placeholder="Email Address (optional)">
             
-            <h3>Total Amount: 0 RWF</h3>
+            <h3>Total Amount: <span id="totalAmount">0</span> RWF</h3>
 
 <select>
 
@@ -131,6 +131,12 @@ Complete Order
 </div>
 
 <script>
+
+const total = localStorage.getItem("cartTotal") || 0;
+
+document.getElementById("totalAmount").textContent =
+
+Number(total).toLocaleString();
 
 function completeOrder(){
 
