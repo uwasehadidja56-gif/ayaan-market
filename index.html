@@ -247,8 +247,10 @@ function removeItem(index) {
     cart.splice(index, 1);
 
     const cartDiv = document.getElementById("cart");
+    const checkoutButton = document.getElementById("checkoutBtn");
 
     cartDiv.innerHTML = "";
+    cartDiv.appendChild(checkoutButton);
 
     let total = 0;
 
