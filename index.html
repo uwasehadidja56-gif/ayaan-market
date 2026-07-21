@@ -314,6 +314,13 @@ function checkout() {
         return;
 
     }
+    localStorage.setItem(
+
+    "cartTotal",
+
+    cart.reduce((sum, item) => sum + Number(item.price), 0)
+
+);
     window.location.href = "payment.html";
 
 return;
