@@ -323,6 +323,11 @@ function checkout() {
     cart.reduce((sum, item) => sum + Number(item.price), 0)
 
 );
+const total = cart.reduce((sum, item) => sum + Number(item.price), 0);
+
+alert(total);
+
+localStorage.setItem("cartTotal", total);
     window.location.href = "payment.html";
 
 return;
